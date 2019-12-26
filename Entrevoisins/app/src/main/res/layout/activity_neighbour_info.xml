@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/neighbourInfo"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/BackgroundColor"
+    android:orientation="vertical"
+    tools:context=".ui.neighbour_Info.Activity.NeighbourInfo">
+
+    <ImageButton
+        android:id="@+id/neighbourInfo_backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@color/transparent"
+        android:elevation="4dp"
+        android:src="@drawable/ic_arrow_back_24px"
+        android:tint="@color/White"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        />
+
+    <FrameLayout
+        android:id="@+id/neighbourInfo_header_activity"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+
+        app:layout_constraintDimensionRatio="H, 4:3"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/neighbourInfo_fav_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="4dp"
+        app:backgroundTint="#FFEB3B"
+        app:layout_constraintBottom_toBottomOf="@+id/neighbourInfo_header_activity"
+        app:layout_constraintRight_toRightOf="@id/neighbourInfo_infos"
+        app:layout_constraintTop_toBottomOf="@+id/neighbourInfo_header_activity" />
+
+    <FrameLayout
+        android:id="@+id/neighbourInfo_infos"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:background="@color/White"
+        android:elevation="4dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintDimensionRatio="H, 7:4"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/neighbourInfo_header_activity" />
+
+    <FrameLayout
+        android:id="@+id/neighbourInfo_description"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:background="@color/White"
+        android:elevation="4dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintDimensionRatio="H, 7:3"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/neighbourInfo_infos" />
+
+
+</android.support.constraint.ConstraintLayout>

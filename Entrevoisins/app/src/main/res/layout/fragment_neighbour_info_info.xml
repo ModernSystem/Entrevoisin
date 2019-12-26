@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    tools:context=".ui.neighbour_Info.Fragments.NeighbourInfoInfoFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/infos_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:text="@string/hello_blank_fragment"
+            android:textColor="@color/Grey"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/infos_location"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="15dp"
+            android:drawableStart="@drawable/ic_home_work_24px"
+            android:drawableTint="@color/colorAccent"
+            android:text="@string/hello_blank_fragment"
+            android:textColor="@color/Grey"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/infos_phone_number"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="15dp"
+            android:drawableStart="@drawable/ic_call_24px"
+            android:drawableTint="@color/colorAccent"
+            android:text="@string/hello_blank_fragment"
+            android:textColor="@color/Grey"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/infos_social_link"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="15dp"
+            android:drawableStart="@drawable/ic_language_24px"
+            android:drawableTint="@color/colorAccent"
+            android:text="@string/hello_blank_fragment"
+            android:textColor="@color/Grey"
+            android:textSize="15sp" />
+
+
+    </LinearLayout>
+
+
+</FrameLayout>
