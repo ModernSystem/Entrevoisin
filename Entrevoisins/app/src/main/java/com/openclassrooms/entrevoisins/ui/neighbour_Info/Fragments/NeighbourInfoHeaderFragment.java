@@ -35,7 +35,7 @@ public class NeighbourInfoHeaderFragment extends Fragment {
         View mView = inflater.inflate(R.layout.fragment_neighbour_info_header, container, false);
         mTextView = mView.findViewById(R.id.header_text);
         mImageView = mView.findViewById(R.id.header_image);
-        udpateUIWithInfos();
+        updateUIWithInfo();
 
         return mView;
     }
@@ -45,7 +45,7 @@ public class NeighbourInfoHeaderFragment extends Fragment {
      * Method to get the neighbours infos and put in the UI
      */
 
-    public void udpateUIWithInfos() {
+    public void updateUIWithInfo() {
         mNeighbour = NeighbourInfo.getNeighbourInFragment();
         mTextView.setText(mNeighbour.getName());
         Glide.with(this)

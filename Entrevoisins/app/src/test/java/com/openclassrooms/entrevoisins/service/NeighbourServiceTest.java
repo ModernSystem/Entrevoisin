@@ -60,7 +60,5 @@ public class NeighbourServiceTest {
         assertFalse(ListNeighbourActivity.mFavNeighbourList.contains(mNeighbourToRemove));
     }
 
-    @Test
-    public void check() {
-    }
+
 }

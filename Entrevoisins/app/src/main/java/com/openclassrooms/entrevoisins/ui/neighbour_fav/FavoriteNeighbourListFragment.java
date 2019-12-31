@@ -15,9 +15,14 @@ import android.view.ViewGroup;
 
 import com.openclassrooms.entrevoisins.R;
 import com.openclassrooms.entrevoisins.Utils.ItemClickSupport;
+import com.openclassrooms.entrevoisins.events.DeleteNeighbourEvent;
 import com.openclassrooms.entrevoisins.model.Neighbour;
 import com.openclassrooms.entrevoisins.ui.neighbour_Info.Activity.NeighbourInfo;
 import com.openclassrooms.entrevoisins.ui.neighbour_list.ListNeighbourActivity;
+import com.openclassrooms.entrevoisins.ui.neighbour_list.MyNeighbourRecyclerViewAdapter;
+
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
 
 import java.util.List;
 
@@ -47,6 +52,28 @@ public class FavoriteNeighbourListFragment extends Fragment {
         Log.e(TAG, "onResume: initialized ");
         initList();
     }
+    @Override
+    public void onStart() {
+        super.onStart();
+        EventBus.getDefault().register(this);
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        EventBus.getDefault().unregister(this);
+    }
+
+    /**
+     * Fired if the user clicks on a delete button
+     *
+     * @param event
+     */
+    @Subscribe
+    public void onDeleteFavNeighbour(DeleteNeighbourEvent event) {
+        ListNeighbourActivity.removeFav(event.neighbour);
+        initList();
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -67,7 +94,7 @@ public class FavoriteNeighbourListFragment extends Fragment {
 
     private void initList() {
         mNeighbours = ListNeighbourActivity.mFavNeighbourList;
-        mRecyclerView.setAdapter(new FavoriteListAdapter(mNeighbours));
+        mRecyclerView.setAdapter(new MyNeighbourRecyclerViewAdapter(mNeighbours));
     }
 
     /**
@@ -86,5 +113,7 @@ public class FavoriteNeighbourListFragment extends Fragment {
                     }
                 });
     }
+
+
 
 }

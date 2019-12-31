@@ -19,6 +19,8 @@ public class ListNeighbourActivity extends AppCompatActivity {
 
     private static final String TAG = "tag";
     public static List<Neighbour> mFavNeighbourList;
+
+
     // UI Components
     @BindView(R.id.tabs)
     TabLayout mTabLayout;
